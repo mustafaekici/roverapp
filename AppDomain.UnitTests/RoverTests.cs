@@ -42,9 +42,7 @@ namespace AppDomain.UnitTests
         [TestMethod]
         public void Run_WrongArgumentForGetStepCount_WrongStepCount()
         {
-            var mock = NSubstitute.Substitute.For<ISpaceCar>();
             var drmock = Substitute.For<IDirection>();
-
             var service = new Rover("rover1", new ConsoleInputService(), new ConsoleOutputService(), drmock);
             service.Movement = "M";
             RoverCoordinates c = new RoverCoordinates() { XPoint = 0, YPoint = 0, Heading='V'};
